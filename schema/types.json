@@ -1,0 +1,55 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scene description",
+  "description": "A schema for describing a scene.",
+  "$defs": {
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      },
+      "description": "Position in 3D space in meters.",
+      "required": ["x", "y", "z"]
+    },
+    "quaternion": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" },
+        "w": { "type": "number" }
+      },
+      "required": ["x", "y", "z", "w"]
+    },
+    "transform": {
+      "type": "object",
+      "properties": {
+        "position": { "$ref": "#/$defs/position" },
+        "quaternion": { "$ref": "#/$defs/quaternion" }
+      },
+      "required": ["position", "quaternion"]
+    },
+    "orbit": {
+      "type": "object",
+      "properties": {
+        "semi_major_axis": { "type": "number" },
+        "eccentricity": { "type": "number" },
+        "inclination": { "type": "number" },
+        "raan": { "type": "number" },
+        "arg_of_pericenter": { "type": "number" },
+        "true_anomaly": { "type": "number" }
+      },
+      "required": [
+        "semi_major_axis",
+        "eccentricity",
+        "inclination",
+        "raan",
+        "arg_of_pericenter",
+        "true_anomaly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Spacecraft Description",
+    "description": "A schema for describing a spacecraft.",
+    "type": "object",
+    "properties": {
+        "frames": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": { "type": "string" },
+                    "transform": { "$ref": "types.json#/$defs/transform" },
+                    "description": { "type": "string" },
+                    "parent": { "type": "string" }
+                },
+                "required": ["name", "transform"]
+            }
+        }
+    }
+}

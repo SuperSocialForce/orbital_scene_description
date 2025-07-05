@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scene description",
+  "description": "A schema for describing a scene.",
+  "type": "object",
+  "properties": {
+    "epoch": { "type": "string", "format": "date-time" },
+    "sun": { "$ref": "types.json#/$defs/position" },
+    "spacecrafts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "transform": { "$ref": "types.json#/$defs/transform" },
+          "description": { "type": "string" }
+        },
+        "required": ["name", "transform"]
+      }
+    }
+  }
+}
