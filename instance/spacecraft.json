@@ -1,28 +1,25 @@
 {
-    "frames": [
-        {
-            "name": "bus",
+    "frames": {
+        "bus": {
             "transform": {
                 "position": { "x": 0, "y": 0, "z": 0 },
                 "quaternion": { "x": 0, "y": 0, "z": 0, "w": 1 }
             },
             "description": "This is the first frame."
         },
-        {
-            "name": "payload",
+        "payload": {
             "transform": {
                 "position": { "x": 0, "y": 0, "z": 0 },
                 "quaternion": { "x": 0, "y": 0, "z": 0, "w": 1 }
             },
             "description": "This is the second frame."
         },
-        {
-            "name": "camera",
+        "camera": {
             "transform": {
                 "position": { "x": 0.5, "y": 0, "z": 0 },
                 "quaternion": { "x": 0, "y": 0, "z": 0, "w": 1 }
             },
             "parent": "payload"
         }
-    ]
+    }
 }

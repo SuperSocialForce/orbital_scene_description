@@ -1,21 +1,19 @@
 {
     "epoch": "2023-10-01T12:00:00Z",
-    "sun": { "x": 1.0, "y": 2.0, "z": 3.0 },
-    "spacecrafts": [
-        {
-            "name": "iss",
+    "sun": { "x": 1.0, "y": 1.0, "z": 1.0 },
+    "spacecrafts": {
+        "iss": {
             "transform": {
-                "position": { "x": 1.0, "y": 2.0, "z": 3.0 },
+                "position": { "x": 0.0, "y": 7000000.0, "z": 1000000.0 },
                 "quaternion": { "x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0 }
             }
         },
-        {
-            "name": "target",
+        "target": {
             "transform": {
-                "position": { "x": 1.0, "y": 2.0, "z": 3.0 },
+                "position": { "x": 0.0, "y": 2.0, "z": 7000000.0 },
                 "quaternion": { "x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0 }
             },
             "description": "spacecraft.json"
         }
-    ]
+    }
 }
